@@ -1,16 +1,18 @@
-const { fechExpenses,addExpenses, deleteExpenses } = require('../Controllers/ExpenseController');
+const { fetchExpenses, addExpenses, deleteExpenses } = require('../Controllers/ExpenseController');
+ 
 
 const router = require('express').Router();
 
+//router.get('/',(req,res)=>res.send('expense get added successfully'));
 
-//fetch all expenses
-//router.get('/',(req,res)=>res.send('expense working'));
-
-router.get('/',fechExpenses);
+//fetch all expenses of the user based on user ID
+router.get('/',fetchExpenses);
 
 //add expenses
 router.post('/',addExpenses);
 
-//dlt expenses
-router.delete('/:expenseID',deleteExpenses);
-module.exports= router;
+//delete expenses
+router.delete('/:expenseId', deleteExpenses);
+
+
+module.exports =router;
