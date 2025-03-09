@@ -16,7 +16,7 @@ const addExpenses = async (req, res) => {
         );
 
         return res.status(200).json({
-            message: "Your expense added successfully",
+            message: "Samruddhi,Your expense added successfully",
             success: true,
             data: userData?.expenses
         });
@@ -40,7 +40,7 @@ const fetchExpenses = async (req, res) => {
         const userData = await UserModel.findById(_id).select('expenses');
 
         return res.status(200).json({
-            message: "Expenses fetched successfully",
+            message: "Samruddhi , your Expenses fetched successfully",
             success: true,
             data: userData?.expenses
         });
@@ -83,7 +83,7 @@ const deleteExpenses = async (req, res) => {
         }
 
         return res.status(200).json({
-            message: "Your expense was deleted successfully",
+            message: "Samruddhi, Your expense was deleted successfully",
             success: true,
             data: userData?.expenses
         });
